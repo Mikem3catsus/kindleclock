@@ -15,9 +15,14 @@
                 var m = dt.getMinutes();
                 var d = dt.getDate();
                 var mnth = months[dt.getMonth()]
+                <!-- convert from 24h clock to 12h clock -->
+                if(h > 12)
+                {
+                    h = h - 12;
+                }
                 if(h < 10)
                 {
-                    h = "0" + h;
+                    h = "" + h;
                 }
                 if(m < 10)
                 {
@@ -41,19 +46,19 @@
     <body>
         <table>
             <tr>
-                <td id="clock" rowspan="2" colspan="2">
+                <td id="clock" colspan="2">
                 </td>
-                <td id="temperature">
-                    %(TEMPERATURE)s°C
+                <td id="date">
                 </td>
             </tr>
+            <!--
             <tr>
                 <td id="forecast">
                     %(FORECAST)s
                 </td>
             </tr>
             <tr>
-                <td id="date">
+                <td id="temperature">
                 </td>
                 <td id="agenda">
                     %(AGENDA)s
@@ -62,6 +67,7 @@
                     %(UNREADGMAIL)s
                 </td>
             </tr>
+            -->
         </table>
     </body>
 </html>

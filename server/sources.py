@@ -10,6 +10,7 @@ import xml.dom.minidom
 
 
 def unreadgmail():
+    return '???'
     try:
         auth = open("gmailauth.txt").read()
         URL = 'https://gmail.google.com/gmail/feed/atom'
@@ -44,7 +45,7 @@ def agenda():
          * https://developers.google.com/google-apps/calendar/v2/reference#Parameters
          * https://developers.google.com/gdata/docs/2.0/reference#Queries
     """
-
+    return "???"
     try:
         results = ""
         URL = open("calxmlurl.txt").read()
@@ -83,6 +84,7 @@ def agenda():
 
 
 def forecast():
+    return "???"
     try:
         URL = "ftp://ftp2.bom.gov.au/anon/gen/fwo/IDA00007.dat"
         data = urllib.urlopen(URL).read()
@@ -104,6 +106,7 @@ def forecast():
 
 
 def temperature():
+    return "???"
     try:
         URL = "http://www.bom.gov.au/fwo/IDT60901/IDT60901.94970.axf"
         data = urllib.urlopen(URL).read()

@@ -1,7 +1,8 @@
 import BaseHTTPServer
 import sources
 import tools
-
+import logging
+logging.basicConfig(level=logging.INFO)
 
 # Settings
 PORT_NUMBER = 8000
@@ -20,7 +21,8 @@ class MyHandler(BaseHTTPServer.BaseHTTPRequestHandler):
         s.send_response(200)
         s.send_header("Content-type", tools._content_type(tools._filename(s)))
         s.end_headers()
-
+        logging.info("completed do_HEAD")
+        
     def do_GET(s):
         filename = tools._filename(s)
 
@@ -45,11 +47,14 @@ class MyHandler(BaseHTTPServer.BaseHTTPRequestHandler):
             else:
                 s.wfile.write(f.read())
 
+        logging.info("completed do_GET")
+        
     def log_message(self, format, *args):
         return
 
 if __name__ == '__main__':
     httpd = BaseHTTPServer.HTTPServer(("", PORT_NUMBER), MyHandler)
+    logging.info("starting server")
     try:
         httpd.serve_forever()
     except KeyboardInterrupt:

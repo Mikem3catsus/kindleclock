@@ -1,0 +1,22 @@
+https://github.com/thisismyrobot/kindleclock
+http://www.thisismyrobot.com/2012/11/use-kindle-and-python-as-clockdashboard.html
+
+on-kindle maybe a good source for other python-weather solutions
+http://www.shatteredhaven.com/2012/11/1347365-kindle-weather-display.html
+
+Original. Has weather icons
+https://mpetroff.net/2012/09/kindle-weather-display/
+
+Calendar:
+
+python caldav - should be able to interface to iCloud, but it seems a little unclear how to determine what the server is.
+https://pythonhosted.org/caldav/
+http://stackoverflow.com/questions/9751255/apple-icloud-calendar-api
+http://stackoverflow.com/questions/14416501/icloud-caldav-via-php?rq=1
+
+Alternatively, there is also pyicloud which looks simpler, but requires more associated modules:
+https://pypi.python.org/pypi/pyicloud
+
+
+CSS docs:
+http://www.w3schools.com/css/css_table.asp
